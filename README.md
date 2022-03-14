@@ -1,1 +1,1 @@
-# wordrpess-faq-schema
+# wordrpess accordion FAQ schema
