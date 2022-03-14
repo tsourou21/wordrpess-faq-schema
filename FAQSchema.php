@@ -34,7 +34,7 @@ function faqSchema($atts){
     $question_array = explode( '|', $no_whitespaces_text );
 	
 	$no_whitespaces_text = preg_replace( '/\s*,\s*/', ',', filter_var( $attributes['answer'], FILTER_SANITIZE_FULL_SPECIAL_CHARS) ); 
-    $answer_array = explode( '|', $no_whitespaces_text ); ?>
+    $answer_array = explode( '||', $no_whitespaces_text ); ?>
 
 	<div itemscope itemtype="https://schema.org/FAQPage" class="accordion">
 		<h2 class="accordion__heading">Frequently Asked Questions</h2>
@@ -55,6 +55,6 @@ function faqSchema($atts){
 $myvariable = ob_get_clean();
 return $myvariable;
 }
-add_shortcode('forthright-schema', 'faqSchema');
+add_shortcode('accordion-schema', 'faqSchema');
 
 // [extraServices question='Microneedling, Needle Roller, Skin Boosters' answer='1,2,3']
